@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Todo List</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="title">Todo List</h1>
+
+  
+    <div class="form-row">
+      <input type="text" id="todo-input" placeholder="Add a todo . . ." />
+      <input type="date" id="date-input" />
+      <button id="add-btn" class="add-btn">+</button>
+    </div>
+
+    <div class="buttons-row">
+
+      <div class="filter-dropdown">
+        <button id="filter-toggle" class="btn filter-btn">
+          FILTER: All Tasks ▼
+        </button>
+
+        <div id="filter-menu" class="filter-menu hidden">
+          <div class="filter-option" data-filter="all">All Tasks</div>
+          <div class="filter-option" data-filter="pending">Pending</div>
+          <div class="filter-option" data-filter="completed">Completed</div>
+        </div>
+      </div>
+
+      <button id="delete-all" class="btn delete-all">DELETE ALL</button>
+    </div>
+
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>TASK</th>
+            <th>DUE DATE</th>
+            <th>STATUS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+
+        <tbody id="todo-body">
+          <tr>
+            <td colspan="4" class="empty">No task found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
